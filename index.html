@@ -1,103 +1,143 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoAgentX – AI Automation Agency</title>
-  <!-- Link to external CSS stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Include a Google Font for modern look -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>AutoAgentX - AI Agents For Everything</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e10;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(90deg, #6b0dde, #3700ff);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #ffffff;
+    }
+    header p {
+      margin: 20px 0;
+      font-size: 1.25rem;
+      color: #cccccc;
+    }
+    header a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-weight: bold;
+      background: white;
+      color: #3700ff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    header a:hover {
+      background: #ccccff;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-card {
+      background: #1e1e22;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+    }
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 10px auto;
+      padding: 12px;
+      background: #2c2c2c;
+      border: none;
+      color: white;
+      border-radius: 6px;
+    }
+    form button {
+      background: #6b0dde;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #3700ff;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation bar (sticky at top) -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">AutoAgent<span>X</span></div>
-      <nav class="nav-links">
-        <!-- Nav links scroll to respective sections -->
-        <a href="#hero">Home</a>
-        <a href="#what-we-do">What We Do</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <h1>AutoAgentX</h1>
+    <p>Fire your team. Automate everything. AI Agents on demand.</p>
+    <a href="#contact">Get Started</a>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="container hero-content">
-      <h1 class="hero-title">Automate Your Future with AI</h1>
-      <p class="hero-subtitle">Empowering businesses with intelligent automation.</p>
-      <a href="#contact" class="cta-button">Get Started</a>
-    </div>
-  </section>
-
-  <!-- What We Do Section -->
-  <section id="what-we-do" class="section content-section reveal">
-    <div class="container">
-      <h2>What We Do</h2>
-      <p>AutoAgentX is an AI automation agency that streamlines business processes using cutting-edge artificial intelligence. We integrate AI solutions to save you time, reduce costs, and boost efficiency.</p>
-    </div>
-  </section>
-
-  <!-- Services / Packages Section -->
-  <section id="services" class="section services-section reveal">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="services-list">
-        <!-- Example service item -->
-        <div class="service-item">
-          <h3>Process Automation</h3>
-          <p>Automate repetitive tasks and workflows to free up your team’s time for more important work.</p>
-        </div>
-        <div class="service-item">
-          <h3>AI Consulting</h3>
-          <p>Expert guidance on integrating AI into your business strategy for maximum impact and ROI.</p>
-        </div>
-        <div class="service-item">
-          <h3>Custom AI Solutions</h3>
-          <p>Development of tailor-made AI tools (chatbots, predictive models, etc.) to solve your unique business challenges.</p>
-        </div>
+  <section id="what">
+    <h2>What We Do</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Automation Agents</h3>
+        <p>We build custom AI-powered agents that automate your workflows, outreach, CRM, and more.</p>
+      </div>
+      <div class="service-card">
+        <h3>Content Machines</h3>
+        <p>Turn any topic into fully AI-edited YouTube videos, blogs, and social media content.</p>
+      </div>
+      <div class="service-card">
+        <h3>Lead Generators</h3>
+        <p>Auto outreach agents that find leads, send cold emails, and book meetings while you sleep.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section reveal">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have a question or want to discuss a project? Reach out to us and we'll respond promptly.</p>
-      <!-- Contact Form (using Formspree to send emails) -->
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-        <!-- Note: replace "your-form-id" with the actual Formspree ID after signing up -->
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required placeholder="Your Name" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="_replyto" id="email" required placeholder="Your Email" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" rows="5" required placeholder="Your Message"></textarea>
-        </div>
-        <button type="submit" class="submit-button">Send Message</button>
-        <!-- After form submission, Formspree can redirect to a thank-you page or show a success message -->
-      </form>
-    </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Drop your email and we’ll reach out with a custom demo.</p>
+    <form action="https://formspree.io/f/yourID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
-  <!-- Footer (optional, could include copyright or links) -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 AutoAgentX. All rights reserved.</p>
-    </div>
+  <footer>
+    &copy; 2025 AutoAgentX. All rights reserved.
   </footer>
-
-  <!-- Include external JavaScript file -->
-  <script src="script.js"></script>
 </body>
 </html>
