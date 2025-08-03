@@ -1,0 +1,202 @@
+/* Base Styles and Variables */
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-primary: #6e00ff; /* vibrant purple */
+  --color-secondary: #00d8ff; /* bright blue/cyan */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;  /* smooth scrolling for anchor links :contentReference[oaicite:7]{index=7} */
+}
+
+/* Container to wrap content and set max width */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #000; /* solid black background for navbar */
+  z-index: 1000;
+  /* Optional: add slight shadow for separation */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo span {
+  color: var(--color-primary); /* highlight the 'X' in logo with primary color */
+}
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  /* Full-screen hero with a gradient background for a tech feel */
+  background: linear-gradient(135deg, rgba(110,0,255,0.8), rgba(0,216,255,0.8)), url('') center/cover;
+  /* The gradient above uses semi-transparent purple to blue. We could add a background image URL if available */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* General Section Styles */
+.section {
+  padding: 60px 20px;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.content-section p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto; /* center text block */
+  text-align: center;
+}
+
+/* Services Section */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 2em;
+}
+.service-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 40px); /* three columns on desktop */
+  text-align: center;
+}
+.service-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+  color: var(--color-secondary);
+}
+.service-item p {
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+.contact-section p {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto 2em auto;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.3em;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.submit-button {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit-button:hover {
+  background: var(--color-secondary);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #666;
+}
+.footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design - Media Queries */
+/* On smaller screens, adjust layout */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* Hide nav links if we were implementing a hamburger menu (for simplicity, could just stack links instead) */
+  }
+  /* We could implement a hamburger icon and toggling logic here if needed */
+  .services-list {
+    flex-direction: column;
+  }
+  .service-item {
+    flex: 1 1 100%;
+  }
+}
